@@ -8,10 +8,28 @@
   display: inline-block;
 }
 
-.back{
-  background-color: burlywood;
-}
-.flipped{
+/*********Card colors for when flipped*********/
+.red{
   background-color: red;
 }
 
+.orange{
+  background-color: orange;
+}
+
+.blue{
+  background-color: blue;
+}
+
+.purple{
+  background-color: purple;
+}
+
+.green{
+  background-color: green;
+}
+
+/*******Back of card******/
+.back{
+  background-color: burlywood;
+}
