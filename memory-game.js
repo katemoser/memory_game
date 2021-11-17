@@ -7,9 +7,11 @@ const COLORS = [
   "red", "blue", "green", "orange", "purple",
   "red", "blue", "green", "orange", "purple",
 ];
+const NUM_PAIRS_TO_WIN = COLORS.length/2;
 
 const colors = shuffle(COLORS);
 const selectedCards = [];
+let score = 0;
 
 createCards(colors);
 
@@ -101,6 +103,10 @@ function checkForMatch(){
 
 function handleMatch(){
   alert("This is a match!");
+  score++;
+  let lblScore = document.getElementById('scoreDisplay');
+  lblScore.innerHTML = score;
+  checkForWin();
   //keep cards face up, and add 1 to score
 
 }
@@ -111,5 +117,11 @@ function handleNotMatch(){
 
   for(let card of selectedCards){
     unFlipCard(card)
+  }
+}
+
+function checkForWin(){
+  if(score === NUM_PAIRS_TO_WIN){
+    alert("You win!");
   }
 }

@@ -8,6 +8,7 @@
   display: inline-block;
 }
 
+
 /*********Card colors for when flipped*********/
 .red{
   background-color: red;
@@ -32,4 +33,9 @@
 /*******Back of card******/
 .back{
   background-color: burlywood;
+  transition: all .1s ease-in-out;
+}
+
+.back:hover{
+  transform: scale(1.05);
 }
