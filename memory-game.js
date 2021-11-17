@@ -41,12 +41,10 @@ function shuffle(items) {
 
 function createCards(colors) {
   const gameBoard = document.getElementById("game");
-
   for (let color of colors) {
     let new_card = document.createElement("div");
     new_card.classList.add(color);
-    new_card.classList.add("back");
-    //new_card.className = "back";
+    new_card.classList.add("back");  
     //add event listener
     new_card.addEventListener("click", handleCardClick);
     gameBoard.appendChild(new_card);
@@ -65,6 +63,7 @@ function flipCard(card) {
 
 function unFlipCard(card) {
   card.classList.add("back");
+  card.addEventListener("click", handleCardClick);
   // ... you need to write this ...
 }
 
@@ -82,8 +81,9 @@ function handleCardClick(evt) {
 
   //check if we have a match if there are two cards in selectedCards array
   if(selectedCards.length === 2){
-    checkForMatch();
+    setTimeout(checkForMatch, FOUND_MATCH_WAIT_MSECS);
   }
+
 }
 
 /*  Check if the two cards in selectedCards array are the same color  */
@@ -94,6 +94,9 @@ function checkForMatch(){
   else{
     handleNotMatch();
   }
+  //set selected cards back to 0
+  selectedCards.length = 0;
+
 }
 
 function handleMatch(){
@@ -104,7 +107,9 @@ function handleMatch(){
 
 function handleNotMatch(){
   alert("Not a match!");
+    //flip cards back over, replace event listeners
 
-  //flip cards back over, replace event listeners, and empty the selectedCards array
-
+  for(let card of selectedCards){
+    unFlipCard(card)
+  }
 }
