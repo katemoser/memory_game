@@ -102,7 +102,7 @@ function checkForMatch(){
 }
 
 function handleMatch(){
-  alert("This is a match!");
+  //alert("This is a match!");
   score++;
   let lblScore = document.getElementById('scoreDisplay');
   lblScore.innerHTML = score;
@@ -112,7 +112,7 @@ function handleMatch(){
 }
 
 function handleNotMatch(){
-  alert("Not a match!");
+  //alert("Not a match!");
     //flip cards back over, replace event listeners
 
   for(let card of selectedCards){
@@ -122,6 +122,6 @@ function handleNotMatch(){
 
 function checkForWin(){
   if(score === NUM_PAIRS_TO_WIN){
-    alert("You win!");
+    setTimeout(alert("You win!"), FOUND_MATCH_WAIT_MSECS);
   }
 }

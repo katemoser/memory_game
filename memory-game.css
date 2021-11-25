@@ -1,7 +1,18 @@
 /* you can add to or change this. */
+body {
+  background-color: lightgoldenrodyellow;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
+}
+
+#game {
+  background-color: lightgreen;
+  border-radius: 5px;
+  max-width:45em;
+}
 #game div {
   border: 1px solid black;
+  border-radius: 10px;
   width: 100px;
   height: 100px;
   margin: 20px;
