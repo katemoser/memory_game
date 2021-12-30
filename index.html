@@ -8,7 +8,27 @@
 <body>
 
 <h1>Memory Game!</h1>
-<label id="scoreDisplay">0</label>
+
+<div id = "controls">
+  <div id = "score">
+    <label for="scoreDisplay">Score:</labels>
+    <label id="scoreDisplay">0</label>
+    <label for="bestDisplay">Best:</label>
+    <label id="bestDisplay">0</label>
+  </div>
+  <div id = "clicks">
+    <label for ="clicksDisplay">Clicks:</label>
+    <label id = "clicksDisplay">0</label>
+  </div>
+
+  <label for="size">Size:</label>
+  <select id="size">
+    <option value="4">Small (8 cards)</option>
+    <option value="6">Medium (12 Cards)</option>
+    <option value="8">Large (16 Cards)</option>
+  </select>
+  <button id="newGame">New Game</button>
+</div>
 
 <div id="game">
   

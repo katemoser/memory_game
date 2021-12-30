@@ -6,10 +6,12 @@ body {
 }
 
 #game {
+  box-sizing: border-box;
   background-color: lightgreen;
   border-radius: 5px;
-  max-width:45em;
+  max-width: 45em;
 }
+
 #game div {
   border: 1px solid black;
   border-radius: 10px;
@@ -41,6 +43,17 @@ body {
   background-color: green;
 }
 
+.cyan{
+  background-color: cyan;
+}
+
+.white{
+  background-color: white;
+}
+
+.black{
+  background-color: black;
+}
 /*******Back of card******/
 .back{
   background-color: burlywood;
