@@ -2,14 +2,17 @@
 body {
   background-color: lightgoldenrodyellow;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
+  align-items: center;
+}
+h1{
+  padding: 10px;
 }
 
 #game {
   box-sizing: border-box;
   background-color: lightgreen;
   border-radius: 5px;
-  max-width: 45em;
+  max-width: 36em;
 }
 
 #game div {
@@ -20,6 +23,25 @@ body {
   margin: 20px;
   display: inline-block;
 }
+
+#controls{
+  display: flex;
+  max-width: 36em;
+  align-items: center;
+  border:solid burlywood 3px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+#controls div{
+  padding: 5px;
+}
+
+#score div{
+  padding-top: 1em; 
+}
+
+
 
 
 /*********Card colors for when flipped*********/

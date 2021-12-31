@@ -11,6 +11,8 @@ const selectedCards = [];
 let score = 0;
 let clicks = 0;
 let numPairsToWin = 0;
+let best = 0;
+
 
 
 //const colors = shuffle(COLORS);
@@ -180,13 +182,19 @@ function checkForWin(){
   if(score === numPairsToWin){
     console.log("You win!")
     setTimeout(alert("You win!"), FOUND_MATCH_WAIT_MSECS);
+    updateBest();
   }
 }
 
 function updateCounters(){
-  let lblScore = document.getElementById('scoreDisplay');
-  lblScore.innerHTML = score;
-
-  let lblClicks = document.getElementById("clicksDisplay")
+  let lblClicks = document.getElementById("clicksDisplay");
   lblClicks.innerHTML = clicks;
+}
+
+function updateBest(){
+  if(clicks < best || best === 0){
+    best = clicks;
+  }
+  let lblBest = document.getElementById("bestDisplay");
+  lblBest.innerHTML = best;
 }
